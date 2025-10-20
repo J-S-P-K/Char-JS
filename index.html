@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba JS</title>
+</head>
+<body>
+    <canvas id="miCharJS" width="100px" height="100px"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script>
+        var ctx = document.getElementById('miCharJS').getContext('2d');
+    
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Elemto1', 'Elemento2', 'Elemento3', 'Elemento4', 'Elemento5', 'Elemento6'],
+            datasets: [{
+                label: '# de votos',
+                data: [12,19,3,5,1,3],
+                backgroundColor: [
+                    '#c020205c', 
+                    '#20c0205c',
+                    '#2020c05c',
+                    '#a020c05c',
+                    '#20c0a05c',
+                    '#c020205c'
+                ],
+                borderColor: [
+                    '#c02020',
+                    '#20c020',
+                    '#2020c0',
+                    '#a020c0',
+                    '#20c0a0',
+                    '#c02020'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        }
+        });
+    
+    </script>
+
+
+</body>
+</html>
